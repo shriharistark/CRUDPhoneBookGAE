@@ -40,7 +40,7 @@ public class Read extends HttpServlet {
 		q = new Query("Phonebook");
 		String criteria = request.getParameter("criteria");
 		String param = request.getParameter("params");
-		System.out.println("what?"+param);
+		//System.out.println("what?"+param);
 		PreparedQuery pq;
 		List<Entity> result;
 		if (criteria.equals("recent")) {
