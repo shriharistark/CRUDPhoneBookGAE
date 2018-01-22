@@ -9,9 +9,11 @@
 <body>
 <br>
 <a href = "/index.html">Go home</a>
+<h2>View All Contacts</h2>
+<div>
 <%
-request.getRequestDispatcher("/readallserv").include(request, response);
+request.getRequestDispatcher("/readallserv?cursor=&action=next").include(request, response);
 %>
-
+</div>
 </body>
 </html>

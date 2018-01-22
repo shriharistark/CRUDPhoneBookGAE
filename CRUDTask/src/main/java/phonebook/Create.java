@@ -36,11 +36,14 @@ public class Create extends HttpServlet {
 
 	  try{
 		  datastore.put(entity);
-		  response.getWriter().print("<div><p>Write success</p></div><br><a href = \"/create.jsp\">Add more books</a><br><a href = \"/read.jsp\">Retrieve book</a>");
+		  response.getWriter().print("<div><p>Write success</p></div><br><a href = \"/create.jsp\">Add more contacts</a><br><a href = \"/read.jsp\">Retrieve contacts</a>");
+		  response.getWriter().println("<br><br><p>------------</p><a href=\"/index.html\">Go Home</a>");
+
 	  }
 	  
 	  catch(DatastoreFailureException ds){
-		  response.getWriter().print("<div><p>Write Fail</p></div><br><a href = \"/create.jsp\">Add again</a><br><a href = \"/read.jsp\">Retrieve book</a>");
+		  response.getWriter().print("<div><p>Write Fail</p></div><br><a href = \"/create.jsp\">Add again</a><br><a href = \"/read.jsp\">Retrieve contact</a>");
+		  response.getWriter().println("<br><br><p>------------</p><a href=\"/index.html\">Go Home</a>");
 	  }
 
   }
